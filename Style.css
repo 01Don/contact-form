@@ -1,0 +1,243 @@
+body {
+  background: hsl(148, 38%, 91%);
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  color: hsl(187, 24%, 22%);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px 30px;
+  border-radius: 20px;
+  width: 50%;
+  margin: 90px auto; /* Centering the form horizontally */
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#firstname,
+#lastname {
+  padding: 10px 30px 10px 20px;
+  width: 270px;
+  border-radius: 5px;
+  border: 1px solid hsl(186, 15%, 59%);
+  transition: border-color 0.3s ease;
+}
+
+#firstname:active,
+#lastname:active {
+  border-color: hsl(169, 82%, 27%);
+}
+
+#firstname:focus,
+#lastname:focus {
+  outline: none;
+  border-color: hsl(169, 82%, 27%);
+}
+
+.name-container {
+  display: flex;
+  gap: 20px; /* Space between the items */
+}
+
+.name-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 30px;
+}
+
+#email {
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(186, 15%, 59%);
+}
+
+#email:active {
+  border-color: hsl(169, 82%, 27%);
+}
+
+#email:focus {
+  border-color: hsl(169, 82%, 27%);
+  outline: none;
+}
+
+.email-cont {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0px 30px;
+}
+
+.general-query,
+.Support-request {
+  padding: 10px 30px 10px 20px;
+  width: 500px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+}
+
+.general-query:focus,
+.Support-request:focus {
+  border-color: hsl(169, 82%, 27%);
+}
+
+.general-query:active,
+.Support-request:active {
+  border-color: hsl(169, 82%, 27%);
+}
+
+.query {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 0px 30px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(186, 15%, 59%);
+  background: hsl(0, 0%, 100%);
+}
+
+input[type="radio"]:checked + label::before {
+  background: hsl(169, 82%, 27%);
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: hsl(0, 0%, 100%);
+}
+
+.massage-inp {
+  padding: 10px 20px 60px 20px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 30px;
+}
+
+.consent {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0px 0px 30px;
+}
+
+.tik {
+  border: 1px hsl(186, 15%, 59%);
+}
+
+.Submit-btn {
+  background-color: hsl(169, 82%, 27%);
+  border: none;
+  border-radius: 4px;
+  padding: 15px 10px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.Submit-btn {
+  background-color:hsl(168, 81%, 16%);
+}
+
+.success-message{
+  width: 300px;
+  height: 100px;
+  background-color:hsl(168, 81%, 16%) ;
+}
+
+/* Existing styles */
+
+.error-message {
+  display: none;
+  color: hsl(0, 66%, 54%);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+input.error,
+textarea.error,
+.message-inp.error,
+.tik.error,
+input[type="radio"].error {
+  border: 2px solid hsl(0, 66%, 54%);
+}
+
+
+
+#success-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+@media (max-width: 768px) {
+  .name-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .name-item {
+    flex: none;
+    width: 100%;
+  }
+
+  .query {
+    flex-direction: column;
+  }
+
+  .general-query,
+  .Support-request {
+    width: 85%;
+  }
+
+  .Submit-btn {
+    width: 100%;
+  }
+}
