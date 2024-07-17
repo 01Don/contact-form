@@ -223,6 +223,13 @@ input[type="radio"].error {
     gap: 10px;
   }
 
+#firstname,
+#lastname {
+  padding: 10px 30px 10px 20px;
+  width: 200px;
+}
+
+  
   .name-item {
     flex: none;
     width: 100%;
